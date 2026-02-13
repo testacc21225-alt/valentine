@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kuhu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #1a1a1a, #000000);
+      color: white;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      opacity: 0.8;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #yes {
+      background-color: #ff2e63;
+      color: white;
+    }
+
+    #yes:hover {
+      transform: scale(1.1);
+    }
+
+    #no {
+      background-color: grey;
+      color: white;
+      position: absolute;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 class="fade-in">Hey Kuhu ❤️</h1>
+  <h2 class="fade-in">Out of all the timelines... I still choose you.</h2>
+  <h2 class="fade-in">Will you be my Valentine?</h2>
+
+  <button id="yes" onclick="celebrate()">YES 💖</button>
+  <button id="no" onmouseover="moveButton()">NO 🙄</button>
+
+<script>
+function moveButton() {
+  var x = Math.random() * (window.innerWidth - 100);
+  var y = Math.random() * (window.innerHeight - 50);
+  document.getElementById('no').style.left = x + 'px';
+  document.getElementById('no').style.top = y + 'px';
+}
+
+function celebrate() {
+  document.body.innerHTML = `
+    <h1 style="font-size:50px;">SHE SAID YES 😭❤️</h1>
+    <h2>Best decision of your life, Kuhu.</h2>
+    <h3>Now we celebrate. Forever.</h3>
+  `;
+}
+</script>
+
+</body>
+</html>
